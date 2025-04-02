@@ -2,20 +2,14 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
 export async function generateMetaData(): Promise<Metadata> {
-  
-
   return {
-    title: "Not Found | Tagify.Social",
+    title: "Not Found | Tijaratk",
     description: "Not Found",
   };
 }
 
 export default async function NotFound() {
-  
-
   return (
     <main className="container mx-auto h-screen flex items-center justify-center">
       <div className="flex flex-wrap justify-center lg:items-start lg:justify-normal lg:gap-8">
@@ -34,7 +28,7 @@ export default async function NotFound() {
 
           <div className="flex">
             <Link href="/" className="btn btn-outline">
-							Back to Home
+              Back to Home
             </Link>
           </div>
         </div>

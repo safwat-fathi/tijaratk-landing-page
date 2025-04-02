@@ -15,13 +15,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.20.6
+          node-version: 20.18.3
 
       - name: Install Dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build Project
-        run: yarn build
+        run: npm run build
 
       - name: Deploy to DigitalOcean via SSH
         uses: appleboy/ssh-action@master
@@ -30,8 +30,8 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd tagify.social
+            cd tijaratk-landing-page
             git pull origin main
-            yarn install
-            yarn build
-            pm2 restart landing-page || pm2 start "yarn start" --name "landing-page" 
+            npm install
+            npm run build
+            pm2 restart landing-page || pm2 start "yarn start" --name "landing-page"

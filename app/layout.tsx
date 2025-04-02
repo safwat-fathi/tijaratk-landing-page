@@ -1,20 +1,17 @@
+import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
-
-
   return {
-
-		title: "Tagify.Social",
-		description:
-			"Automatically tag, analyze, and understand your Facebook page interactions using advanced AI",
-	};
+    title: "Tijaratk - تجارتك",
+    description:
+      "Automatically tag, analyze, and understand your Facebook page interactions using advanced AI",
+  };
 }
 
 export const viewport: Viewport = {
