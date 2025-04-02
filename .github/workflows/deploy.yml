@@ -23,6 +23,14 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Load nvm and Use Node
+        run: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+          nvm use node
+          node -v
+          npm -v
+
       - name: Deploy to DigitalOcean via SSH
         uses: appleboy/ssh-action@master
         with:
