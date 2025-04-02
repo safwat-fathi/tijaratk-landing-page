@@ -1,5 +1,3 @@
-
-
 case `uname` in
   *CYGWIN*|*MINGW*|*MSYS*)
     npx.cmd lint-staged --config .lintstagedrc.mjs # bug on Windows/Github Desktop: add `.cmd` extension fixes it
