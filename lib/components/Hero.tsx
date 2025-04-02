@@ -15,8 +15,8 @@ export const Hero = () => {
                 style={{ backgroundColor: "white", borderRadius: "50%" }}
                 src="/logo-no-bg.png"
                 alt="Tijaratk Logo"
-                width={350}
-                height={100}
+                width={512}
+                height={512}
                 placeholder="empty"
                 priority
               />
