@@ -1,4 +1,4 @@
-import { Brain, MessageCircle, PieChart, Tags, Users, Zap } from "lucide-react";
+import { Brain, Clock, PieChart, Tags, Users, Zap } from "lucide-react";
 
 export const Features = () => {
   const features = [
@@ -6,19 +6,7 @@ export const Features = () => {
       icon: <Tags className="h-8 w-8 text-primary" />,
       title: "Automated Tagging",
       description:
-        "AI automatically tags comments and messages with relevant product references",
-    },
-    {
-      icon: <Brain className="h-8 w-8 text-primary" />,
-      title: "Smart Classification",
-      description:
-        "Automatically categorize interactions as inquiries, pricing questions, or feedback",
-    },
-    {
-      icon: <MessageCircle className="h-8 w-8 text-primary" />,
-      title: "Sentiment Analysis",
-      description:
-        "Understand customer sentiment in real-time through AI-powered analysis",
+        "Tijaratk automatically tags comments and messages with relevant product references",
     },
     {
       icon: <PieChart className="h-8 w-8 text-primary" />,
@@ -33,9 +21,27 @@ export const Features = () => {
         "Process and analyze interactions as they happen on your Facebook page",
     },
     {
+      icon: <Brain className="h-8 w-8 text-primary" />,
+      title: "Smart Classification",
+      description:
+        "Automatically categorize interactions as inquiries, pricing questions, or feedback",
+    },
+    // {
+    // 	icon: <MessageCircle className="h-8 w-8 text-primary" />,
+    // 	title: "Sentiment Analysis",
+    // 	description:
+    // 		"Understand customer sentiment in real-time through AI-powered analysis",
+    // },
+    {
       icon: <Users className="h-8 w-8 text-primary" />,
       title: "Customer Understanding",
       description: "Gain deeper insights into customer needs and preferences",
+    },
+    {
+      icon: <Clock className="h-8 w-8 text-primary" />,
+      title: "Save Time & Effort",
+      description:
+        "Manage everything from product listings to message filtering—all in one place with a simple and intuitive dashboard",
     },
   ];
 
@@ -45,7 +51,8 @@ export const Features = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Powerful Features</h2>
           <p className="text-xl text-gray-600">
-            Everything you need to understand your customers better
+            {/* Everything you need to understand your customers better */}
+            Everything you need to grow your business faster
           </p>
         </div>
 

@@ -1,7 +1,7 @@
+import { Features } from "@/app/(home)/components/Features";
+import { Hero } from "@/app/(home)/components/Hero";
+import { HowItWorks } from "@/app/(home)/components/HowItWorks";
 import { CTA } from "@/lib/components/CTA";
-import { Features } from "@/lib/components/Features";
-import { Hero } from "@/lib/components/Hero";
-import { HowItWorks } from "@/lib/components/HowItWorks";
 import { Pricing } from "@/lib/components/Pricing";
 
 const Home = () => {

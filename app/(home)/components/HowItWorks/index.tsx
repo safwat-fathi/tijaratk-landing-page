@@ -2,7 +2,7 @@ export const HowItWorks = () => {
   const steps = [
     {
       number: "1",
-      title: "Connect Your Page",
+      title: "Connect Your Facebook Page",
       description: "Link your Facebook business page to our platform securely",
     },
     {
