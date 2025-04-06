@@ -1,24 +1,50 @@
-import { BadgeCheck, Check } from "lucide-react";
+import { BadgeCheck, Check, X } from "lucide-react";
 
 const tiers = [
+  // {
+  // 	name: "🎯 Free Plan (Basic – Always Free!)",
+  // 	price: 0,
+  // 	features: [
+  // 		"Add up to 10 products",
+  // 		"Track 50 comments & messages per month",
+  // 		"Basic dashboard for insights",
+  // 		"New message notifications",
+  // 		"No AI-powered classification",
+  // 		"No dedicated support",
+  // 	],
+  // },
   {
-    name: "Starter",
-    price: 12,
+    name: "🔥 Starter Plan (For Small Businesses)",
+    price: 149,
     features: [
-      "5 Products",
-      "Basic Analytics",
-      "24/7 Support",
-      "3 Team Member",
+      "Add up to 50 products",
+      "Track 500 comments & messages per month",
+      "Advanced dashboard for better insights",
+      "Email support",
+      "No AI-powered smart classification",
     ],
   },
   {
-    name: "Professional",
-    price: 20,
+    name: "🚀 Pro Plan (For Growing Businesses)",
+    price: 349,
     features: [
-      "Unlimited Products",
-      "Advanced Analytics",
-      "Priority Support",
-      "5 Team Members",
+      "Add up to 100 products",
+      "Track 2,000 comments & messages per month",
+      "AI-powered smart classification of customer interactions",
+      "Advanced dashboard with detailed insights",
+      "Instant message notifications",
+      "Priority email & live chat support",
+    ],
+  },
+  {
+    name: "📈 Business Plan (For Large-Scale Operations)",
+    price: 599,
+    features: [
+      "All Pro Plan features",
+      "Unlimited comment & message tracking",
+      "Advanced analytics & engagement reports",
+      "VIP support via phone & live chat",
+      "Multi-user access for team collaboration",
     ],
   },
 ];
@@ -36,11 +62,11 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="mt-20 flex flex-wrap justify-center gap-8">
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tiers.map((tier, index) => (
             <div
               key={tier.name}
-              className="w-[300px] md:w-[400px] relative p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col animate-fade-up"
+              className="w-[400px] relative p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col animate-fade-up md:last:col-span-2 md:last:justify-self-center lg:last:col-span-1 lg:last:justify-self-auto"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -55,14 +81,18 @@ export const Pricing = () => {
                 </h3>
                 <p className="mt-4 flex items-baseline text-gray-900">
                   <span className="text-5xl font-bold tracking-tight">
-                    ${tier.price}
+                    EGP {tier.price}
                   </span>
                   <span className="ml-1 text-xl font-semibold">/month</span>
                 </p>
                 <ul className="mt-6 space-y-6">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex">
-                      <Check className="flex-shrink-0 w-6 h-6 text-primary" />
+                      {feature.includes("No") ? (
+                        <X className="flex-shrink-0 w-6 h-6 text-primary" />
+                      ) : (
+                        <Check className="flex-shrink-0 w-6 h-6 text-primary" />
+                      )}
                       <span className="ml-3 text-gray-500">{feature}</span>
                     </li>
                   ))}
@@ -71,7 +101,7 @@ export const Pricing = () => {
               <a
                 target="_blank"
                 href="https://forms.gle/8XcjdyiR2Dgxh5QQ8"
-                className="transition-colors mt-8 w-full rounded text-white bg-primary hover:bg-primary/90 py-3 px-6"
+                className="transition-colors text-center mt-8 w-full rounded text-white bg-primary hover:bg-primary/90 py-3 px-6"
               >
                 Get Started
               </a>

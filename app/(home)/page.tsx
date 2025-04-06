@@ -1,8 +1,10 @@
+import { CTA } from "@/app/(home)/components/CTA";
 import { Features } from "@/app/(home)/components/Features";
 import { Hero } from "@/app/(home)/components/Hero";
 import { HowItWorks } from "@/app/(home)/components/HowItWorks";
-import { CTA } from "@/lib/components/CTA";
 import { Pricing } from "@/lib/components/Pricing";
+
+import { FinalCTA } from "./components/FinalCTA";
 
 const Home = () => {
   return (
@@ -12,6 +14,7 @@ const Home = () => {
       <HowItWorks />
       <CTA />
       <Pricing />
+      <FinalCTA />
     </div>
   );
 };
